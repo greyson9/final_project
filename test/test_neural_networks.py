@@ -17,7 +17,7 @@ def test_autoencoder():
     weights, biases, sse = nn.train_network(num_epochs, binary_input.T,
                                             binary_input.T, learning_rate,
                                             reg_rate, layer_sizes, num_batches)
-    output = np.round(feed_forward(weights_list[0], biases_list[0],
+    output = np.round(nn.feed_forward(weights, biases,
                                    binary_input.T).T, 1)
     assert np.array_equal(binary_input, output)
 
