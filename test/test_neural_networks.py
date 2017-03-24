@@ -6,7 +6,7 @@ import numpy as np
 def test_autoencoder():
     binary_input = np.asarray([list(map(lambda x: float(x),
                                         list(num))) for num in [
-                                            bin(x)[2:].zfill(n) for x in [
+                                            bin(x)[2:].zfill(8) for x in [
                                                 int(np.power(2, i)
                                                     ) for i in range(0, 8)]]])
     layer_sizes = [8, 3, 8]
