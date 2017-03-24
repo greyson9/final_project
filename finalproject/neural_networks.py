@@ -80,7 +80,7 @@ def calc_sse(mat1, mat2):
 # calculate the next step toward
 # some minimum...hopefully a global one
 # COMPLETE
-def train_network(num_epochs, batch_inp, batch_outp, learning_rate, reg_rate, layer_sizes, batch_size):
+def train_network(num_epochs, batch_inp, batch_outp, learning_rate, reg_rate, layer_sizes, num_batches):
     epochs = range(num_epochs)
     weight_mats = [
         np.random.normal(0, 1.0 / np.sqrt(layer_sizes[i]), (layer_sizes[i + 1], layer_sizes[i])) for i in range(0, len(layer_sizes) - 1)]
