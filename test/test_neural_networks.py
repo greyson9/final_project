@@ -13,7 +13,7 @@ def test_autoencoder():
     reg_rate = 0.0
     num_epochs = 4000
     num_batches = 2
-    learn_rate = 1.0
+    learning_rate = 1.0
     weights, biases, sse = nn.train_network(num_epochs, binary_input.T,
                                             binary_input.T, learning_rate,
                                             reg_rate, layer_sizes, num_batches)
